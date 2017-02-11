@@ -16,12 +16,25 @@
         <input placeholder="task name" ng-model='vm.currentTask.name'>
         <button ng-click="vm.add()">Add</button>
       </div>
+      
+      <!-- tasks -->
 
       <div ng-repeat="task in vm.list.tasks | orderBy: '$index'">
-        <p>
-          {{ $index +1 }}: {{ task.name }} - completed: {{ task.complete }}
-        </p>
+          <div ng-show="isInReadMode(task.id)">
+            <p>
+              {{ $index +1 }}: {{ task.name }} - completed: {{ task.complete }}
+            </p>
+        
+            <!-- task options -->
+          
+            <button ng-click="vm.startEdit(task.id)">Edit</button>
+            <button ng-click="vm.startRemove(task.id)">Delete</button>
+            <!--end task options -->
+          
+          </div>
+        
       </div>
+        
     </div>
 
     <script type="text/javascript" src="./js/angular.js"></script>

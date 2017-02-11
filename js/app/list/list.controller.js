@@ -8,6 +8,7 @@ function ListController() {
   vm.currentTask = {};
   vm.startAdd = startAdd;
   vm.startEdit = startEdit;
+  vm.isInReadMode = isInReadMode;
   vm.isInAddMode = isInAddMode;
   vm.isInEditMode = isInEditMode;
   vm.add = add;
@@ -54,6 +55,10 @@ function ListController() {
   
   function startEdit() {
     
+  }
+  
+  function isInReadMode() {
+    return true;
   }
   
   function isInAddMode() {
