@@ -31,3 +31,5 @@ list = [
 add a task,
 edit a task,
 remove a task
+
+stopped at 28:05 on Thursday night
