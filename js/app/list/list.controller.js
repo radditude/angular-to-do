@@ -7,8 +7,11 @@ function ListController() {
 
   vm.currentTask = {};
   vm.startAdd = startAdd;
+  vm.startEdit = startEdit;
   vm.isInAddMode = isInAddMode;
+  vm.isInEditMode = isInEditMode;
   vm.add = add;
+  vm.save = save;
 
   vm.list = {
     name: 'Todo List',
@@ -49,14 +52,26 @@ function ListController() {
     vm.currentTask = {};
   }
   
+  function startEdit() {
+    
+  }
+  
   function isInAddMode() {
     return addFlag;
+  }
+  
+  function isInEditMode() {
+    
   }
 
   function add() {
     vm.currentTask.complete = false;
     vm.list.tasks.push(vm.currentTask);
     reset();
+  }
+  
+  function save() {
+    
   }
 }
 
