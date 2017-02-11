@@ -46,12 +46,17 @@ function ListController() {
   function startAdd() {
     reset();
     addFlag = true;
-    vm.currentTask = {}
+    vm.currentTask = {};
+  }
+  
+  function isInAddMode() {
+    return addFlag;
   }
 
   function add() {
     vm.currentTask.complete = false;
     vm.list.tasks.push(vm.currentTask);
+    reset();
   }
 }
 
